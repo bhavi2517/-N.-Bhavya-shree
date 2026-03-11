@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int a = 0, b = 1, c, sum = 1; 
+    int i;
+    printf("Fibonacci Series: %d %d ", a, b);
+    for(i = 3; i <= 10; i++) {
+        c = a + b;
+        printf("%d ", c);
+        sum = sum + c;
+        a = b;
+        b = c;
+    }
+    printf("Sum of first 10 Fibonacci numbers = %d", sum);
+ return 0;
+}
