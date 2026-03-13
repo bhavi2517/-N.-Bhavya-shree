@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int i, n, j;
+    
+    // Get the peak number from the user
+    if (scanf("%d", &n) != 1) return 1;
+
+    // Upper part of the pattern (including the middle line)
+    for (i = 1; i <= n; i++) {
+        for (j = 1; j <= i; j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+
+    // Lower part of the pattern
+    for (i = n - 1; i >= 1; i--) {
+        for (j = 1; j <= i; j++) {
+            printf("%d", i);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
