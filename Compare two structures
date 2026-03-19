@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Student {
+    int id;
+};
+
+int main() {
+    struct Student s1 = {1}, s2 = {1};
+
+    if(s1.id == s2.id)
+        printf("Equal");
+    else
+        printf("Not Equal");
+
+    return 0;
+}
