@@ -1,0 +1,15 @@
+#include <stdio.h>
+struct Student {
+    int id;
+};
+
+void modify(struct Student *s){
+    s->id = 100;
+}
+
+int main() {
+    struct Student s = {1};
+    modify(&s);
+    printf("%d", s.id);
+    return 0;
+}
