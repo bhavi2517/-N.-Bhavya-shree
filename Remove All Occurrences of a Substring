@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100] = "abcxyzabcxyz";
+    char sub[] = "xyz";
+    char result[100] = "";
+    char *pos, *start = str;
+
+    while ((pos = strstr(start, sub)) != NULL) {
+        strncat(result, start, pos - start);
+        start = pos + strlen(sub);
+    }
+    strcat(result, start);
+
+    printf("Result: %s", result);
+    return 0;
+}
