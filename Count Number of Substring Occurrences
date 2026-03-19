@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[100] = "banana";
+    char sub[] = "ana";
+
+    int count = 0;
+    char *pos = str;
+
+    while ((pos = strstr(pos, sub)) != NULL) {
+        count++;
+        pos++;
+    }
+
+    printf("Count = %d", count);
+    return 0;
+}
