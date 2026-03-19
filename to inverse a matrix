@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    float a, b, c, d;
+    float determinant;
+
+    printf("Enter elements of 2x2 matrix:\n");
+    printf("a b c d:\n");
+    scanf("%f %f %f %f", &a, &b, &c, &d);
+
+    // Calculate determinant
+    determinant = (a * d) - (b * c);
+
+    // Check if inverse exists
+    if (determinant == 0) {
+        printf("Inverse does not exist (determinant is 0)\n");
+    } else {
+        printf("Inverse of matrix is:\n");
+        printf("%f\t%f\n", d / determinant, -b / determinant);
+        printf("%f\t%f\n", -c / determinant, a / determinant);
+    }
+
+    return 0;
+}
