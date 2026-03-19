@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "banana";
+    int len = strlen(str);
+    char longest[50] = "";
+
+    for (int i = 0; i < len; i++) {
+        for (int j = i + 1; j < len; j++) {
+            int k = 0;
+            while (str[i + k] == str[j + k]) {
+                k++;
+            }
+            if (k > strlen(longest)) {
+                strncpy(longest, &str[i], k);
+                longest[k] = '\0';
+            }
+        }
+    }
+
+    printf("Longest repeated substring: %s", longest);
+    return 0;
+}
