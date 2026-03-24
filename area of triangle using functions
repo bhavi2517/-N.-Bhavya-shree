@@ -1,0 +1,16 @@
+#include <stdio.h>
+float tri(int b, int h);
+int main() {
+    int a, b;
+    float area;
+   printf("Enter two numbers (base and height): ");
+     scanf("%d %d", &a, &b);
+    area = tri(a, b);
+    printf("area = %.2f\n", area);
+  return 0;
+}
+float tri(int b, int h) {
+    float result;
+    result = (b * h) / 2.0; 
+    return result;
+}
