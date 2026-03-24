@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define PI 3.14  
+float mul(float r); 
+int main() {
+    float n, area;
+  printf("Enter the radius: ");
+    scanf("%f", &n); 
+    area = mul(n); 
+    printf("Area = %.2f\n", area); 
+return 0;
+}
+float mul(float r) {
+    float result;
+    result = PI * r * r; 
+    return result;
+}
