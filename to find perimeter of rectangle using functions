@@ -1,0 +1,17 @@
+#include <stdio.h>
+int per(int l, int b); 
+
+int main() {
+    int a, c, result;
+    printf("Enter length and breadth: ");
+    scanf("%d %d", &a, &c);
+    result = per(a, c);
+    printf("The perimeter of the rectangle is: %d\n", result);
+
+    return 0;
+}
+int per(int l, int b) {
+    int result;
+    result = 2 * l + 2 * b; 
+    return result;
+}
