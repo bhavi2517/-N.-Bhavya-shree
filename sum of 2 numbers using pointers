@@ -1,0 +1,8 @@
+#include <stdio.h>
+int main() {
+    int a = 10, b = 20;         
+    int *p1 = &a, *P2 = &b;     
+                                
+    printf("sum=%d", *p1 + *P2);
+     return 0;                 
+}
