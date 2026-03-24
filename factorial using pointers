@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main() {
+    int n, i;
+    int fact = 1;
+    int *ptr_n, *ptr_i;
+    int *ptr_fact;
+    ptr_n = &n;
+    ptr_i = &i;
+    ptr_fact = &fact;
+    printf("Enter an integer: ");
+    scanf("%d", ptr_n); 
+    if (*ptr_n < 0) {
+        printf("Factorial of a negative number does not exist.\.n");
+    } else {
+        for (*ptr_i = 1; *ptr_i <= *ptr_n; (*ptr_i)++) {
+            *ptr_fact = (*ptr_fact) * (*ptr_i);
+        }
+        printf("Factorial of %d = %d\n", *ptr_n, *ptr_fact);
+    }
+
+    return 0;
+}
