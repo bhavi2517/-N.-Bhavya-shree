@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+float mul(int a, int b, int c);
+
+int main() {
+    int P, T, R;
+    float Interest;
+    printf("Enter the number: ");
+    scanf("%d %d %d", &P, &T, &R);
+    Interest = mul(P, T, R);
+    printf("Interest = %f", Interest);
+    return 0;
+}
+
+float mul(int a, int b, int c) {
+    float result;
+    result = (a * b * c) / 100.0;
+    return result;
+}
