@@ -1,0 +1,21 @@
+#include <stdio.h>
+void displayarray(int arr[], int size);
+int main() {
+    int arr[5] = {5, 10, 15, 20, 25};
+    int size = 5;
+   displayarray(arr, size);
+
+    return 0;
+}
+
+void displayarray(int arr[], int size) {
+    int i = 0;
+    int sum = 0;
+
+    while (i < size) {
+        sum = sum + arr[i];
+        i++;
+    }
+   printf("sum = %d\n", sum);
+    printf("END\n");
+}
